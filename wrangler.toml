@@ -1,0 +1,28 @@
+# wrangler.toml — Cloudflare Pages configuration
+name = "micro-ges-platform"
+compatibility_date = "2024-09-23"
+
+# The static files to serve are in the /public directory
+pages_build_output_dir = "public"
+
+# ─────────────────────────────────────────────
+# KV NAMESPACE BINDING
+# ─────────────────────────────────────────────
+# STEP 1: Create a KV namespace in Cloudflare dashboard:
+#   Dashboard → Workers & Pages → KV → Create namespace
+#   Name it: "MICRO_GES_PROJECTS"
+#
+# STEP 2: Copy the namespace ID and paste it below
+# STEP 3: In Cloudflare Pages project settings → Functions → KV namespace bindings
+#   Variable name: PROJECTS
+#   KV namespace:  MICRO_GES_PROJECTS (select from dropdown)
+#
+[[kv_namespaces]]
+binding = "PROJECTS"
+id      = "REPLACE_WITH_YOUR_KV_NAMESPACE_ID"
+
+# For local development with wrangler:
+# [[kv_namespaces]]
+# binding  = "PROJECTS"
+# id       = "REPLACE_WITH_YOUR_KV_NAMESPACE_ID"
+# preview_id = "REPLACE_WITH_YOUR_PREVIEW_KV_NAMESPACE_ID"

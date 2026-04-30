@@ -1,0 +1,15 @@
+{
+  "name": "micro-ges-platform",
+  "version": "1.0.0",
+  "description": "Профессиональный калькулятор ТЭО для микро-ГЭС Узбекистана — ПК-129 / ПФ-220",
+  "scripts": {
+    "dev": "wrangler pages dev public --kv PROJECTS",
+    "deploy": "wrangler pages deploy public",
+    "build": "echo 'Static site — no build step needed'"
+  },
+  "devDependencies": {
+    "wrangler": "^3.80.0"
+  },
+  "keywords": ["uzbekistan", "hydropower", "micro-ges", "calculator", "cloudflare-pages"],
+  "license": "MIT"
+}
