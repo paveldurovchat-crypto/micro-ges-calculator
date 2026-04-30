@@ -19,7 +19,7 @@ pages_build_output_dir = "public"
 #
 [[kv_namespaces]]
 binding = "PROJECTS"
-id      = "REPLACE_WITH_YOUR_KV_NAMESPACE_ID"
+id      = "211f05d73fcc4a1fbb933a2e4ccbd4c1"
 
 # For local development with wrangler:
 # [[kv_namespaces]]
